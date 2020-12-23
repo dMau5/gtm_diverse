@@ -54,10 +54,6 @@ def download(path):
     return send_from_directory(DIRECTORY, path, as_attachment=True)
 
 
-def func(molecules):
-    return [molecules[0]]
-
-
 def save_file(names, contents, value):
     """Decode and store a file uploaded with Plotly Dash."""
     name = names[0]
