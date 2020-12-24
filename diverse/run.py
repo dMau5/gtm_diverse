@@ -6,7 +6,7 @@ import os
 import shutil
 from dash.dependencies import Input, Output, State
 from flask import Flask, send_from_directory
-from diverse.gtm_diverse import gtm_diverse
+from gtm_diverse import gtm_diverse
 from rdkit.Chem import SDWriter
 from urllib.parse import quote as urlquote
 
