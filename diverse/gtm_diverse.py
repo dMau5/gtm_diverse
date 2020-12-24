@@ -19,7 +19,7 @@ def gtm_diverse(files, count):
 
     if len(molecules) <= count:
         return molecules
-    
+
     mmp = SimDivFilters.MaxMinPicker()
     picks = mmp.LazyBitVectorPick(molecules_fps, len(molecules_fps), count)
     return [molecules[i] for i in picks]

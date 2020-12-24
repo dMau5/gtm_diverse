@@ -1,0 +1,9 @@
+name: rdkit-env
+channels:
+  - rdkit/label/nightly
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - rdkit
+  - dash
