@@ -4,11 +4,10 @@ WORKDIR /opt
 
 COPY environment.yml .
 RUN conda env create -f environment.yml
-
-SHELL ["conda", "run", "-n", "rdkit-env", "/bin/bash", "-c"]
+ENV PATH /opt/conda/envs/rdkit-env/bin/:$PATH
 
 COPY . .
 WORKDIR /opt/diverse
 
 EXPOSE 5000
-ENTRYPOINT ["conda", "run", "-n", "rdkit-env", "python", "run.py"]
+ENTRYPOINT ["python", "run.py"]
